@@ -1,0 +1,22 @@
+{
+  "name": "customPodGlobalClass",
+  "version": "0.1.0",
+  "summary": "A short description of customPodGlobalClass.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dhavalpansuriyanilu/customPodGlobalClass",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dhavalpansuriyanilu": "dhavalpansuriya.nilu@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/dhavalpansuriyanilu/customPodGlobalClass.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "customPodGlobalClass/Classes/**/*"
+}

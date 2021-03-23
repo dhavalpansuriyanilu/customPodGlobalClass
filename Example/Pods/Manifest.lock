@@ -1,0 +1,16 @@
+PODS:
+  - customPodGlobalClass (0.1.0)
+
+DEPENDENCIES:
+  - customPodGlobalClass (from `../`)
+
+EXTERNAL SOURCES:
+  customPodGlobalClass:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  customPodGlobalClass: ee2be5b933b1840174b5b3b3fea83889070fcdbe
+
+PODFILE CHECKSUM: e0afd7612e486e8d2e7a2c980ed7e0aefecca1ca
+
+COCOAPODS: 1.10.1

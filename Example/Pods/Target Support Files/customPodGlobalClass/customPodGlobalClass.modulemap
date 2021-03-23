@@ -1,0 +1,6 @@
+framework module customPodGlobalClass {
+  umbrella header "customPodGlobalClass-umbrella.h"
+
+  export *
+  module * { export * }
+}
