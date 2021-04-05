@@ -2709,7 +2709,7 @@
 		0DD971AB964CB8C9826BAAFCB73F37FB /* customPodGlobalClass */ = {
 			isa = PBXGroup;
 			children = (
-				18A57C3B2617305D005C61E4 /* Classes */,
+				185471FF261AF372009C91CA /* Classes */,
 				411E12061BB103729BCAB8E4824F3981 /* Pod */,
 				4667B4DAB34D614D366F55ED0C2812F8 /* Support Files */,
 			);
@@ -2752,7 +2752,7 @@
 			name = "NSData+zlib";
 			sourceTree = "<group>";
 		};
-		18A57C3B2617305D005C61E4 /* Classes */ = {
+		185471FF261AF372009C91CA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				18A57C3C2617305D005C61E4 /* CrossPromoAdVC.xib */,

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'customPodGlobalClass'
-  s.version          = '0.1.4'
+  s.version          = '0.1.6'
   s.summary          = 'just write one line code '
 
 # This description is used to generate tags and improve search results.
@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   "ios": "10.0"
   }
 
-  s.source_files = 'customPodGlobalClass/*.{h,m,swift,xib}'
+  s.source_files = 'Classes/*.{h,m,swift,xib}'
  
   # s.resource_bundles = {
   #   'customPodGlobalClass' => ['customPodGlobalClass/Assets/*.png']

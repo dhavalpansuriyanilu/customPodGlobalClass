@@ -10,7 +10,7 @@ import UIKit
 import FLAnimatedImage
 
 @available(iOS 10.0, *)
-class CrossPromoAdVC: UIViewController {
+public class CrossPromoAdVC: UIViewController {
 
     public var closed:((_ isTap:Bool,_ strAPPID:String)->())?
     
@@ -22,7 +22,7 @@ class CrossPromoAdVC: UIViewController {
     var strAppID = ""
     var isTaped = false
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -53,7 +53,7 @@ class CrossPromoAdVC: UIViewController {
        
         // Do any additional setup after loading the view.
     }
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         print(self.bgImage.bounds)

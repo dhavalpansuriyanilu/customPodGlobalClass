@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PurchaseViewController: UIViewController {
+public class PurchaseViewController: UIViewController {
 
     //DEVCHECK
     // 1 - YOUR CLASS NAME MUST BE PurchaseViewController, SET CLASS NAME IN STORYBOARD ALSO
@@ -25,7 +25,7 @@ class PurchaseViewController: UIViewController {
 
     @IBOutlet weak var purchaseButton: UIButton!
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         //DEVCHECK - APPEND PRICE STRING IN "PURCHASE NOW" BUTTON
@@ -41,7 +41,7 @@ class PurchaseViewController: UIViewController {
        // print(val)
 
     }
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if(!isAppeared){
             isAppeared = true

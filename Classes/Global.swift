@@ -20,7 +20,7 @@ import FirebaseAnalytics
 import FirebaseCore
 //import FBAudienceNetwork
 
-struct GlobalConstants{
+public struct GlobalConstants{
 
 //TLCHECK - Before Live Start
 
@@ -215,7 +215,7 @@ struct GlobalConstants{
     static var saveCurrentIndex = "saveCurrentIndex"
 }
 
-func setupAppLaunch() {
+public func setupAppLaunch() {
     
     FirebaseManager.setup()
     
@@ -236,18 +236,18 @@ func setupAppLaunch() {
 //    static let kPurchaseManagerProductFetchedNotification = Notification.Name("kPurchaseManagerProductFetchedNotification")
 //}
 
-enum PurchaseResponse {
+public enum PurchaseResponse {
     case PurchaseResponseSuccess
     case PurchaseResponseFail
     case PurchaseResponseCanceledByUser
 }
-enum ProductFetchedStatus : String{
+public enum ProductFetchedStatus : String{
     case ProductFetchedStatusFetching
     case ProductFetchedStatusSuccess
     case ProductFetchedStatusNotFetched
 }
 
-class CrosspromotionAdManager {
+public class CrosspromotionAdManager {
     
     class ConfigData: NSObject {
 
@@ -578,7 +578,7 @@ class CrosspromotionAdManager {
 
 
 
-class PurchaseManager{
+public class PurchaseManager{
 
     /// It will return whether user already Purchased or not.
     public private(set) static var isPurchased = isPurchasedPersistent
@@ -729,7 +729,7 @@ class PurchaseManager{
 }
 
 
-class AdManager:NSObject{
+public class AdManager:NSObject{
     private static let shared = AdManager()
     
     private enum AdType {
@@ -944,7 +944,7 @@ class AdManager:NSObject{
     
 }
 //TLCHECK AD - IronSource-ChartBoost Start
-class RewardedAdManager:NSObject{
+public class RewardedAdManager:NSObject{
     
     static var isAdAvailable:Bool{
         
@@ -962,7 +962,7 @@ class RewardedAdManager:NSObject{
 }
 //TLCHECK AD - IronSource-ChartBoost End
 
-fileprivate class FirebaseManager{
+ fileprivate class FirebaseManager{
     
     static let remoteConfig = RemoteConfig.remoteConfig()
     
@@ -1007,7 +1007,7 @@ fileprivate class FirebaseManager{
     }
 }
 
-class LocalNotificationManager {
+public class LocalNotificationManager {
     
     enum LocalNotificationPermisionStatus {
         case LocalNotificationPermisionStatusNotEvaluated
@@ -1154,7 +1154,7 @@ class LocalNotificationManager {
     
 }
 
-struct ReviewManager {
+public struct ReviewManager {
     private static var isReviewed = isReviewedPersistent
     static func askForReview(fromVC:UIViewController? = nil, completion: ((Bool) -> ())?) {
         
@@ -1204,7 +1204,7 @@ struct ReviewManager {
     }
     
 }
-class NetworkManager:NSObject{
+public class NetworkManager:NSObject{
     
     public enum NetworkStatus {
         case NetworkStatusReachableThroughWiFi
@@ -1285,7 +1285,7 @@ class NetworkManager:NSObject{
     }
 }
 
-class StoreManager:NSObject,SKStoreProductViewControllerDelegate{
+public class StoreManager:NSObject,SKStoreProductViewControllerDelegate{
     
     private static var completion:(()->())?
 
@@ -1335,7 +1335,7 @@ class StoreManager:NSObject,SKStoreProductViewControllerDelegate{
 
     private static let shared = StoreManager()
         
-    func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
+    public func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
         viewController.dismiss(animated: true) {
             StoreManager.completion?()
             StoreManager.completion = nil
@@ -1343,7 +1343,7 @@ class StoreManager:NSObject,SKStoreProductViewControllerDelegate{
     }
 }
 
-class ShareManager:NSObject{
+public class ShareManager:NSObject{
     /**
         It will Present UIActivityViewController for with Application Sharing Details.
      
@@ -1393,7 +1393,7 @@ class ShareManager:NSObject{
 /**
     It will return current keyWindow's rootViewController, if any VC is presented then it will return that VC.
 */
-func topViewController(controller: UIViewController? = UIWindow.key?.rootViewController) -> UIViewController? {
+ func topViewController(controller: UIViewController? = UIWindow.key?.rootViewController) -> UIViewController? {
     //        if let navigationController = controller as? UINavigationController {
     //            return topViewController(controller: navigationController.visibleViewController)
     //        }
@@ -1408,7 +1408,7 @@ func topViewController(controller: UIViewController? = UIWindow.key?.rootViewCon
     return controller
 }
 
-struct Counters {
+public struct Counters {
     
     //AppLaunch Counter
     static var isFirstTimeAppLaunched : Bool {
@@ -1468,7 +1468,7 @@ struct Counters {
         }
     }
 }
-class HudManager {
+public class HudManager {
     static func show(){
         DispatchQueue.main.async {
             SVProgressHUD.show()
@@ -1487,7 +1487,7 @@ class HudManager {
     }
 }
 
-class ContactManager:NSObject, MFMailComposeViewControllerDelegate{
+public class ContactManager:NSObject, MFMailComposeViewControllerDelegate{
     /**
         It will Present mail composer if available, otherwise Present SafariViewController with contact webpage.
     */
@@ -1507,7 +1507,7 @@ class ContactManager:NSObject, MFMailComposeViewControllerDelegate{
     }
     
     private static let shared = ContactManager()
-    internal func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
     
