@@ -2,9 +2,21 @@ use_frameworks!
 
 platform :ios, '9.0'
 
+
 target 'customPodGlobalClass_Example' do
   pod 'customPodGlobalClass', :path => '../'
 
+  pod 'FLAnimatedImage'
+    pod 'SwiftyStoreKit'
+    pod 'ReachabilitySwift'
+    pod 'SVProgressHUD'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Messaging'
+    pod 'Firebase/RemoteConfig'
+    pod 'FirebaseCrashlytics'
+    pod 'Siren'
+    pod 'FBAudienceNetwork'
+    pod 'IronSourceSDK'
   target 'customPodGlobalClass_Tests' do
     inherit! :search_paths
 

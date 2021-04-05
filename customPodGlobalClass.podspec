@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'customPodGlobalClass'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of customPodGlobalClass.'
+  s.version          = '0.1.4'
+  s.summary          = 'just write one line code '
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+'just write one line code'
                        DESC
 
   s.homepage         = 'https://github.com/dhavalpansuriyanilu/customPodGlobalClass'
@@ -28,10 +28,14 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/dhavalpansuriyanilu/customPodGlobalClass.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = ' 10.0'
+  s.swift_version = '5.0'
+  s.platforms = {
+  "ios": "10.0"
+  }
 
-  s.source_files = 'customPodGlobalClass/Classes/**/*'
-  
+  s.source_files = 'customPodGlobalClass/*.{h,m,swift,xib}'
+ 
   # s.resource_bundles = {
   #   'customPodGlobalClass' => ['customPodGlobalClass/Assets/*.png']
   # }
@@ -39,4 +43,18 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
+  s.static_framework = true
+  s.dependency 'FLAnimatedImage'
+  s.dependency 'SwiftyStoreKit'
+  s.dependency 'ReachabilitySwift'
+  s.dependency 'SVProgressHUD'
+  s.dependency 'Firebase/Analytics'
+  s.dependency 'Firebase/Messaging'
+  s.dependency 'Firebase/RemoteConfig'
+  s.dependency 'FirebaseCrashlytics'
+  s.dependency 'Siren'
+  s.dependency 'FBAudienceNetwork' , '~> 6.2.1'
+  s.dependency 'IronSourceSDK'
+  
 end

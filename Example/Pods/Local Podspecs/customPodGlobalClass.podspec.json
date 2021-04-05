@@ -1,8 +1,8 @@
 {
   "name": "customPodGlobalClass",
   "version": "0.1.0",
-  "summary": "A short description of customPodGlobalClass.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "just write one line code",
+  "description": "'just write one line code'",
   "homepage": "https://github.com/dhavalpansuriyanilu/customPodGlobalClass",
   "license": {
     "type": "MIT",
@@ -16,7 +16,46 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "10.0"
   },
-  "source_files": "customPodGlobalClass/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "Classes/**/*.swift",
+  "frameworks": "UIKit",
+  "static_framework": true,
+  "dependencies": {
+    "FLAnimatedImage": [
+
+    ],
+    "SwiftyStoreKit": [
+
+    ],
+    "ReachabilitySwift": [
+
+    ],
+    "SVProgressHUD": [
+
+    ],
+    "Firebase/Analytics": [
+
+    ],
+    "Firebase/Messaging": [
+
+    ],
+    "Firebase/RemoteConfig": [
+
+    ],
+    "FirebaseCrashlytics": [
+
+    ],
+    "Siren": [
+
+    ],
+    "FBAudienceNetwork": [
+
+    ],
+    "IronSourceSDK": [
+
+    ]
+  },
+  "swift_version": "5.0"
 }
